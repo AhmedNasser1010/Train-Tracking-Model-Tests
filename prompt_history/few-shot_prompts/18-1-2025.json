@@ -1,0 +1,100 @@
+{
+	"fewShotPrompts": [
+	  {
+	    "role": "user",
+	    "content": "١٠١٥ وصل فين"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE train_number = '1015';"
+	  },
+	  {
+	    "role": "user",
+	    "content": "السلام عليكم ورحمة الله وبركاته دلوقتي فين ١٣٥"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE train_number = '135';"
+	  },
+	  {
+	    "role": "user",
+	    "content": "اقرب حاجه طالعه الجيزه من العياط"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE stop_points @> ARRAY['Ayat'] AND stop_points @> ARRAY['Giza'] AND array_position(stop_points, 'Ayat') < array_position(stop_points, 'Giza');"
+	  },
+	  {
+	    "role": "user",
+	    "content": "اقرب قطر من الواسطي للعياط امتي لو سمحتوا ضروري بالله عليكوا"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE stop_points @> ARRAY['Wasta'] AND stop_points @> ARRAY['Ayat'] AND array_position(stop_points, 'Wasta') < array_position(stop_points, 'Ayat');"
+	  },
+	  {
+	    "role": "user",
+	    "content": "164 بيوصل الجيزه الساعه كام"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE train_number = '165';"
+	  },
+	  {
+	    "role": "user",
+	    "content": "١٣٥ بيوصل عياط الساعة كام"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE train_number = '135';"
+	  },
+	  {
+	    "role": "user",
+	    "content": "ف حاجه من الجيزه عياط"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE stop_points @> ARRAY['Giza'] AND stop_points @> ARRAY['Ayat'] AND array_position(stop_points, 'Giza') < array_position(stop_points, 'Ayat');"
+	  },
+	  {
+	    "role": "user",
+	    "content": "هخيشسيب dgslgn"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "invalid query"
+	  },
+	  {
+	    "role": "user",
+	    "content": "Query, Train Number User Message"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "invalid query"
+	  },
+	  {
+	    "role": "user",
+	    "content": "User Message"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "invalid query"
+	  },
+	  {
+	    "role": "user",
+	    "content": "عايز اروح من عياط الى الجيزه في قطار محسن"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE stop_points @> ARRAY['Ayat'] AND stop_points @> ARRAY['Giza'] AND array_position(stop_points, 'Ayat') < array_position(stop_points, 'Giza') AND train_type = 'Improved';"
+	  },
+	  {
+	    "role": "user",
+	    "content": "عايز اروح الجيزه من العياط من بعد 7 بليل"
+	  },
+	  {
+	    "role": "assistant",
+	    "content": "SELECT train_number, train_type, stop_points, arrival_time FROM train_schedule_view WHERE stop_points @> ARRAY['Ayat'] AND stop_points @> ARRAY['Giza'] AND array_position(stop_points, 'Ayat') < array_position(stop_points, 'Giza') AND arrival_time[array_position(stop_points, 'Ayat')]::time > '19:00';"
+	  }
+	]
+}
