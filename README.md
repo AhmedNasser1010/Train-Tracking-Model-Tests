@@ -16,9 +16,10 @@
 | --- | ---------------------- | ------------------------------------------------ |
 | 1   | Where is X             | Where is train number 147                        |
 | 2   | From X to Y            | I want to go from Luxor to Cairo                 |
-| 3   | From X to Y at HH      | I want to go from Luxor to Cairo at 7 AM         |
-| 4   | From X or Y to Z       | I want to go from Cairo or Giza to Luxor         |
-| 5   | From X or Y to Z at HH | I want to go from Cairo or Giza to Luxor at 7 AM |
+| 3   | From X to Y in type Z  | I want to go from Cairo to Luxor in AC train     |
+| 4   | From X to Y at HH      | I want to go from Luxor to Cairo at 7 AM         |
+| 5   | From X or Y to Z       | I want to go from Cairo or Giza to Luxor         |
+| 6   | From X or Y to Z at HH | I want to go from Cairo or Giza to Luxor at 7 AM |
 
 
 
